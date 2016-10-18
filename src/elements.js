@@ -237,13 +237,17 @@ class VConsoleElementsTab extends vConsole.VConsolePlugin {
       for (let i=0; i<$parent.children.length; i++) {
         let $child = $parent.children[i];
         if (!$.hasClass($child, 'vcelm-l')) {
+          // not a child view, skip
           continue;
         }
         childIdx++;
         if ($child.children.length > 0) {
+          // already been rendered, skip
           continue;
         }
         if (!node.childNodes[childIdx]) {
+          // cannot find related node, hide it
+          $child.style.display = 'none';
           continue;
         }
         that.renderView(node.childNodes[childIdx], $child, 'replace');

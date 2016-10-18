@@ -12,6 +12,11 @@
 
   <script src="./lib/vconsole.min.js"></script>
   <script src="../dist/vconsole-elements.min.js"></script>
+  <style>
+  .test {
+    background-color: red;
+  }
+  </style>
 </head>
 <body ontouchstart>
   <div class="page">
@@ -19,53 +24,39 @@
     <div class="weui_text_area">
       <p class="weui_msg_desc">See "Elements" tab in vConsole.</p>
     </div>
-    <div id="test"><p id="p1">p1</p>Test<p id="p2">p2</p></div>
-    <a onclick="console.log(123)" href="javascript:;" class="weui_btn weui_btn_primary">普通日志(log)</a>
-    <a onclick="append()" href="javascript:;" class="weui_btn weui_btn_primary" >append</a>
-    <a onclick="append2()" href="javascript:;" class="weui_btn weui_btn_primary" >append2</a>
-    <a onclick="insert()" href="javascript:;" class="weui_btn weui_btn_primary" >insertBefore</a>
-    <a onclick="replace()" href="javascript:;" class="weui_btn weui_btn_primary" >replace</a>
-    <a onclick="remove()" href="javascript:;" class="weui_btn weui_btn_primary" >remove</a>
-    <a onclick="txt()" href="javascript:;" class="weui_btn weui_btn_primary" >Text</a>
-    <a onclick="attr()" href="javascript:;" class="weui_btn weui_btn_primary" >Attr</a>
+    <div id="test">Hello World</div>
+    <a onclick="ap()" href="javascript:;" class="weui_btn weui_btn_primary" >Append</a>
+    <a onclick="txt()" href="javascript:;" class="weui_btn weui_btn_primary" >Change Text</a>
+    <a onclick="attr()" href="javascript:;" class="weui_btn weui_btn_primary" >Change className</a>
+    <a onclick="replace()" href="javascript:;" class="weui_btn weui_btn_primary" >Replace</a>
+    <a onclick="rm()" href="javascript:;" class="weui_btn weui_btn_primary" >Remove</a>
   </div>
 </body>
 <script>
-function append() {
+function ap() {
+  var d = document.getElementById('test');
   var p = document.createElement('P');
-  p.innerHTML = 'test';
-  document.documentElement.appendChild(p);
+  p.innerHTML = 'Append';
+  d.appendChild(p);
 }
 function replace() {
   var p = document.getElementById('test');
   var d = document.createElement('div');
-  d.innerHTML = 'I am DIV'
+  d.id = p.id;
+  d.innerHTML = 'I am new DIV'
   p.parentNode.replaceChild(d, p);
 }
-function remove() {
+function rm() {
   var p = document.getElementById('test');
   p.parentNode.removeChild(p);
 }
-function append2() {
-  var p = document.getElementById('test');
-  var d = document.getElementById('p1');
-  p.appendChild(d);
-}
-function insert() {
-  var p = document.getElementById('test');
-  var d1 = document.getElementById('p1');
-  var d2 = document.getElementById('p2');
-  var d = document.createElement('P');
-  d.innerHTML = 'new';
-  p.insertBefore(d, d2);
-}
 function txt() {
   var p = document.getElementById('test');
-  p.innerHTML = 'Hello';
+  p.innerHTML = 'Hello vConsole';
 }
 function attr() {
   var p = document.getElementById('test');
-  p.className = 'tcss'
+  p.className = 'test';
 }
 </script>
 </html>

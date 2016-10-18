@@ -13,13 +13,19 @@
 .vcelm-l {
   padding-left: 8px;
   position: relative;
-  min-height: 1px;
+  word-wrap: break-word;
 }
 .vcelm-l.vcelm-noc {
 	padding-left: 0;
 }
 .vcelm-l.vc-toggle > .vcelm-node {
   display: block;
+}
+.vcelm-l .vcelm-node:active {
+  background-color: rgba(0,0,0,0.15);
+}
+.vcelm-l.vcelm-noc .vcelm-node:active {
+  background-color: transparent;
 }
 .vcelm-t {
   white-space: pre-wrap;
@@ -41,7 +47,7 @@
   content: "";
   display: block;
   position: absolute;
-  top: 5px;
+  top: 6px;
   left: 3px;
   width: 0;
   height: 0;

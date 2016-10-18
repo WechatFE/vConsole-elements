@@ -15,9 +15,6 @@ class NodeView {
   constructor(node) {
     this.node = node;
     this.view = this._create(this.node);
-    // auto open first level
-    // $.addClass(this.view, 'vc-toggle');
-    // $.addClass($.all('.vcelm-l', this.view), 'vc-toggle');
   }
 
   get() {

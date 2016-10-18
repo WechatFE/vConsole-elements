@@ -1,6 +1,6 @@
 {
   "name": "vconsole-elements",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A plugin for vConsole.",
   "homepage": "https://github.com/WechatFE/vConsole-elements",
   "main": "dist/vconsole-elements.min.js",
@@ -30,7 +30,7 @@
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "style-loader": "^0.13.1",
-    "vconsole": "^2.5.0",
+    "vconsole": "^2.5.1",
     "webpack": "~1.12.11"
   },
   "author": "WechatFE Team",
