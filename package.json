@@ -1,6 +1,6 @@
 {
   "name": "vconsole-elements",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A plugin for vConsole.",
   "homepage": "https://github.com/WechatFE/vConsole-elements",
   "main": "dist/vconsole-elements.min.js",

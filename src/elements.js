@@ -81,7 +81,7 @@ class VConsoleElementsTab extends vConsole.VConsolePlugin {
     let that = this;
 
     this.node = this.getNode(document.documentElement);
-    console.log(this.node);
+    // console.log(this.node);
 
     // render root view
     let $rootView = this.renderView(this.node, $.one('.vc-log', this.$tabbox));
@@ -105,7 +105,7 @@ class VConsoleElementsTab extends vConsole.VConsolePlugin {
 
   // handle mutation
   onMutation(mutation) {
-    console.log(mutation.type, mutation);
+    // console.log(mutation.type, mutation);
     switch (mutation.type) {
       case 'childList':
         if (mutation.removedNodes.length > 0) {
